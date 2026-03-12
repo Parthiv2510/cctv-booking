@@ -78,7 +78,7 @@ export default function Home() {
       bgColor: "#000",
       textColor: "#fff",
       btnText: "Learn about AI",
-      image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1200&auto=format&fit=crop"
     },
     {
       id: 2,
@@ -89,7 +89,7 @@ export default function Home() {
       bgColor: "#f5f5f7",
       textColor: "#1d1d1f",
       btnText: "View Fire Range",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?q=80&w=1200&auto=format&fit=crop"
     },
     {
         id: 3,
@@ -100,17 +100,17 @@ export default function Home() {
         bgColor: "#ffffff",
         textColor: "#1d1d1f",
         btnText: "Explore Remote Access",
-        image: "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1200&q=80"
+        image: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=1200&auto=format&fit=crop"
       }
   ];
 
   const galleryImages = [
-    "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1521791136064-7986c2959213?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1512428559083-a401a30c4550?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1574621100236-d25b64cfd647?auto=format&fit=crop&w=800&q=80"
+    "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1521791136064-7986c2959213?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1512428559083-a401a30c4550?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1574621100236-d25b64cfd647?q=80&w=800&auto=format&fit=crop"
   ];
 
   return (

@@ -20,6 +20,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   setIsSubmitting(true);
 
   try {
+    // 1. Submit to Formspree for Email/Log
     const response = await fetch('https://formspree.io/f/mqaeewne', {
       method: 'POST',
       headers: {
@@ -33,6 +34,13 @@ const handleSubmit = async (e: React.FormEvent) => {
     });
 
     if (response.ok) {
+      // 2. Prepare WhatsApp message
+      const whatsappNumber = "919558830499";
+      const message = `*New Request - The Pacific*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone}%0A*Address:* ${formData.address}%0A*Property:* ${formData.propertyType}%0A*Note:* ${formData.message}`;
+      
+      // 3. Open WhatsApp (Redirection)
+      window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+      
       setIsSubmitted(true);
     } else {
       alert('Something went wrong. Please try again.');
