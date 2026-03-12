@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './Services.module.css';
-import { Camera, Shield, Cloud, Wrench, Smartphone, Monitor } from 'lucide-react';
+import { Camera, Shield, Wrench, Flame, AlertCircle, Eye } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -9,33 +9,33 @@ const ServicesPage = () => {
   const services = [
     {
       icon: <Camera size={32} />,
-      title: "Vision Pro",
-      description: "Next-generation 4K cameras with advanced neural engines."
+      title: "Smart CCTV",
+      description: "High-definition 4K surveillance with advanced motion analytics and night vision."
     },
     {
-      icon: <Shield size={32} />,
-      title: "Pacific Care",
-      description: "24/7 dedicated monitoring and rapid response teams."
+      icon: <Flame size={32} />,
+      title: "Fire Protection",
+      description: "Comprehensive fire safety audits and high-performance suppression systems."
     },
     {
-      icon: <Cloud size={32} />,
-      title: "The Cloud",
-      description: "End-to-end encrypted storage for your peace of mind."
+      icon: <AlertCircle size={32} />,
+      title: "Smoke Detection",
+      description: "Intelligent smoke and heat sensors that detect potential threats before they escalate."
     },
     {
       icon: <Wrench size={32} />,
-      title: "Pro Install",
-      description: "Precision installation by certified Pacific engineers."
+      title: "Precision Install",
+      description: "Certified engineering teams ensuring your systems are perfectly deployed."
     },
     {
-      icon: <Smartphone size={32} />,
-      title: "Control Center",
-      description: "Manage your entire security ecosystem from one app."
+      icon: <Eye size={32} />,
+      title: "Remote Access",
+      description: "View your properties in real-time from anywhere in the world on any device."
     },
     {
-      icon: <Monitor size={32} />,
-      title: "Enterprise",
-      description: "Scalable solutions for massive industrial deployments."
+      icon: <Shield size={32} />,
+      title: "Compliance",
+      description: "Ensuring your property meets all local fire and safety regulations."
     }
   ];
 
@@ -48,8 +48,8 @@ const ServicesPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1>The Services of The Pacific.</h1>
-          <p>Everything you need to secure your world.</p>
+          <h1>CCTV & Fire Safety Services.</h1>
+          <p>The specialized expertise of The Pacific.</p>
         </motion.div>
         
         <div className={styles.grid}>
@@ -75,9 +75,9 @@ const ServicesPage = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <h2>Custom Solutions.</h2>
-          <p>Talk to a Pacific specialist for a tailored enterprise package.</p>
-          <Link href="/book" className="btn">Contact Sales</Link>
+          <h2>Professional Assessment.</h2>
+          <p>Schedule a specialized audit of your CCTV and Fire Safety needs.</p>
+          <Link href="/book" className="btn">Get Started</Link>
         </motion.div>
       </div>
     </section>

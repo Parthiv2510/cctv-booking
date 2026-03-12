@@ -2,13 +2,12 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Shield, Eye, Lock } from 'lucide-react';
+import { Shield, Camera, Flame } from 'lucide-react';
 import styles from './Hero.module.css';
 
 const Hero = () => {
   return (
     <section className={styles.hero}>
-      {/* Background Video Layer */}
       <div className={styles.videoContainer}>
         <div className={styles.overlay}></div>
         <video 
@@ -24,18 +23,6 @@ const Hero = () => {
       </div>
 
       <div className="container">
-        <div className={styles.topStatus}>
-          <motion.div 
-            className={styles.statusIndicator}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <span className={styles.pulse}></span>
-            SYSTEMS LIVE: GLOBAL REACH
-          </motion.div>
-        </div>
-
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -48,31 +35,30 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <Shield size={14} /> MILITARY-GRADE ENCRYPTION
+            <Shield size={14} /> CERTIFIED PROTECTION
           </motion.div>
           
           <motion.h1>The Pacific</motion.h1>
           <motion.p className={styles.tagline}>
-            Absolute Vision. Total Privacy.
+            CCTV & Fire Safety. Perfected.
           </motion.p>
           
           <div className={styles.features}>
             <div className={styles.featureItem}>
-              <Eye size={20} /> <span>4K Neural Vision</span>
+              <Camera size={20} /> <span>Smart CCTV</span>
             </div>
             <div className={styles.featureItem}>
-              <Lock size={20} /> <span>Biometric Secure</span>
+              <Flame size={20} /> <span>Fire Prevention</span>
             </div>
           </div>
 
           <motion.div className={styles.actions}>
-            <Link href="/book" className="btn">Deploy System</Link>
-            <Link href="/services" className="btn btn-outline">Technical Specs</Link>
+            <Link href="/book" className="btn">Get Free Quote</Link>
+            <Link href="/services" className="btn btn-outline">View Services</Link>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Dynamic Scanning Line */}
       <motion.div 
         className={styles.scanningLine}
         animate={{ top: ['0%', '100%'] }}
