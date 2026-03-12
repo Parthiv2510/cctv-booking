@@ -1,0 +1,116 @@
+.booking {
+  padding-top: 5rem;
+  background-color: var(--muted);
+  min-height: 80vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.info h1 {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.info p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.contactInfo {
+  margin-top: 3rem;
+}
+
+.contactItem {
+  margin-bottom: 2rem;
+}
+
+.formCard {
+  background-color: var(--background);
+  padding: 3rem;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.formGroup label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.formGroup input, .formGroup select, .formGroup textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.formGroup input:focus, .formGroup select:focus, .formGroup textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(0, 74, 173, 0.1);
+}
+
+.success {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.successCard {
+  background-color: var(--background);
+  padding: 4rem;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.successCard h2 {
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .formRow {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .formCard {
+    padding: 2rem;
+  }
+}
