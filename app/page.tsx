@@ -48,7 +48,7 @@ const ScrollSection = ({ section }: { section: any }) => {
           >
             <img src={section.image} alt={section.title} className={styles.gridImage} />
             <div className={styles.imgOverlay}>
-              <Search size={20} /> ANALYZING TARGET...
+              <Search size={20} /> ANALYZING...
             </div>
           </motion.div>
         </div>
@@ -80,14 +80,27 @@ export default function Home() {
       textColor: "#1d1d1f",
       btnText: "View Fire Range",
       image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
-    }
+    },
+    {
+        id: 3,
+        badge: "REMOTE MONITORING",
+        title: "Pacific Connect.",
+        subtitle: "Global Access.",
+        description: "Securely monitor your assets from anywhere in the world with encrypted real-time video streaming.",
+        bgColor: "#ffffff",
+        textColor: "#1d1d1f",
+        btnText: "Explore Remote Access",
+        image: "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1200&q=80"
+      }
   ];
 
   const galleryImages = [
     "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1521791136064-7986c2959213?auto=format&fit=crop&w=800&q=80",
     "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80"
+    "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1512428559083-a401a30c4550?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1574621100236-d25b64cfd647?auto=format&fit=crop&w=800&q=80"
   ];
 
   return (
@@ -103,8 +116,8 @@ export default function Home() {
       <section className={styles.gallery}>
         <div className="container">
           <div className={styles.sectionHeader}>
-            <h2>Precision Design.</h2>
-            <p>Integrated CCTV and Fire Safety for every space.</p>
+            <h2>The Pacific Ecosystem.</h2>
+            <p>Integrated CCTV and Fire Safety solutions for commercial and residential properties.</p>
           </div>
           <div className={styles.galleryGrid}>
             {galleryImages.map((src, idx) => (
@@ -132,8 +145,8 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2>Protect your future.</h2>
-            <p>Specialized CCTV and Fire Safety deployments for your property.</p>
+            <h2>Protect your legacy.</h2>
+            <p>Professional CCTV and Fire Safety deployments. Tailored for you.</p>
             <div className={styles.ctaActions}>
               <a href="/book" className="btn btn-secondary">Get Quote</a>
               <a href="/about" className="btn btn-outline">Learn more</a>
