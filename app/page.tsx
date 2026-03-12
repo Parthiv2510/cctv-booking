@@ -89,7 +89,7 @@ export default function Home() {
       bgColor: "#f5f5f7",
       textColor: "#1d1d1f",
       btnText: "View Fire Range",
-      image: "https://images.unsplash.com/photo-1583907608222-774c70be3921?q=80&w=1200&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1516391104848-dab1999d0e48?q=80&w=1200&auto=format&fit=crop"
     },
     {
         id: 3,
