@@ -20,12 +20,16 @@ const handleSubmit = async (e: React.FormEvent) => {
   setIsSubmitting(true);
 
   try {
-    const response = await fetch('/api/contact', {
+    const response = await fetch('https://formspree.io/f/mqaeewne', {
       method: 'POST',
       headers: {
+        'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({
+        ...formData,
+        _subject: `New The Pacific Request from ${formData.name}`,
+      }),
     });
 
     if (response.ok) {
@@ -37,7 +41,6 @@ const handleSubmit = async (e: React.FormEvent) => {
     console.error('Error submitting form:', error);
     alert('An error occurred. Please try again later.');
   } finally {
-    setIsSubmitting(true); // Changed from false to true to prevent double submission
     setIsSubmitting(false);
   }
 };
