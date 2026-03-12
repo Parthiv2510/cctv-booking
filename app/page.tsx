@@ -108,8 +108,8 @@ export default function Home() {
     "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1521791136064-7986c2959213?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1512428559083-a401a30c4550?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1574621100236-d25b64cfd647?q=80&w=800&auto=format&fit=crop"
   ];
 
