@@ -1,41 +1,44 @@
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-              url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-  background-size: cover;
-  background-position: center;
-  height: 600px;
+  background-color: #000;
+  color: #fff;
+  height: 90vh;
   display: flex;
   align-items: center;
-  color: white;
-}
-
-.content {
-  max-width: 600px;
+  justify-content: center;
+  text-align: center;
+  padding-top: 44px;
 }
 
 .content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
-  color: white;
+  font-size: 80px;
+  color: #fff;
+  margin-bottom: 0;
+  font-weight: 600;
 }
 
-.content p {
-  font-size: 1.25rem;
-  margin-bottom: 2.5rem;
-  opacity: 0.9;
+.tagline {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 19px;
+  color: #a1a1a6;
+  max-width: 600px;
+  margin: 0 auto 30px;
 }
 
 .actions {
   display: flex;
-  gap: 1.5rem;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
-  .content h1 {
-    font-size: 2.5rem;
-  }
-  
-  .actions {
-    flex-direction: column;
-  }
+  .content h1 { font-size: 48px; }
+  .tagline { font-size: 21px; }
+  .hero { height: 80vh; }
 }

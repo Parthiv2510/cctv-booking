@@ -1,64 +1,84 @@
+'use client';
+
 import styles from './Services.module.css';
-import { Camera, Monitor, Shield, Cloud, Settings, Wrench } from 'lucide-react';
+import { Camera, Shield, Cloud, Wrench, Smartphone, Monitor } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const ServicesPage = () => {
   const services = [
     {
-      icon: <Camera size={40} />,
-      title: "CCTV Installation",
-      description: "Professional installation of high-definition security cameras for homes and businesses. We ensure optimal coverage and seamless integration."
+      icon: <Camera size={32} />,
+      title: "Vision Pro",
+      description: "Next-generation 4K cameras with advanced neural engines."
     },
     {
-      icon: <Monitor size={40} />,
-      title: "24/7 Monitoring",
-      description: "Round-the-clock monitoring services to detect and respond to security threats in real-time. Stay protected even when you're away."
+      icon: <Shield size={32} />,
+      title: "Pacific Care",
+      description: "24/7 dedicated monitoring and rapid response teams."
     },
     {
-      icon: <Shield size={40} />,
-      title: "Security Audits",
-      description: "Comprehensive site surveys and risk assessments to identify vulnerabilities and recommend the best security solutions for your property."
+      icon: <Cloud size={32} />,
+      title: "The Cloud",
+      description: "End-to-end encrypted storage for your peace of mind."
     },
     {
-      icon: <Cloud size={40} />,
-      title: "Cloud Storage",
-      description: "Secure cloud backup for your video footage. Access your recordings anytime, anywhere with encrypted cloud storage solutions."
+      icon: <Wrench size={32} />,
+      title: "Pro Install",
+      description: "Precision installation by certified Pacific engineers."
     },
     {
-      icon: <Settings size={40} />,
-      title: "System Integration",
-      description: "Connect your CCTV system with other smart home devices and security alarms for a fully integrated security ecosystem."
+      icon: <Smartphone size={32} />,
+      title: "Control Center",
+      description: "Manage your entire security ecosystem from one app."
     },
     {
-      icon: <Wrench size={40} />,
-      title: "Maintenance & Repair",
-      description: "Regular maintenance checks and prompt repair services to ensure your security system is always functioning at its best."
+      icon: <Monitor size={32} />,
+      title: "Enterprise",
+      description: "Scalable solutions for massive industrial deployments."
     }
   ];
 
   return (
     <section className={styles.services}>
       <div className="container">
-        <div className={styles.header}>
-          <h1>Our Security Services</h1>
-          <p>We offer a wide range of professional security solutions to protect what matters most to you.</p>
-        </div>
+        <motion.div 
+          className={styles.header}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1>The Services of The Pacific.</h1>
+          <p>Everything you need to secure your world.</p>
+        </motion.div>
         
         <div className={styles.grid}>
           {services.map((service, index) => (
-            <div key={index} className={styles.card}>
+            <motion.div 
+              key={index} 
+              className={styles.card}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+            >
               <div className={styles.icon}>{service.icon}</div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        <div className={styles.cta}>
-          <h2>Need a Custom Solution?</h2>
-          <p>Contact our experts today for a tailored security package that fits your specific requirements.</p>
-          <Link href="/book" className="btn">Get a Custom Quote</Link>
-        </div>
+        <motion.div 
+          className={styles.cta}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <h2>Custom Solutions.</h2>
+          <p>Talk to a Pacific specialist for a tailored enterprise package.</p>
+          <Link href="/book" className="btn">Contact Sales</Link>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,53 +1,51 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import styles from './About.module.css';
 
 const AboutPage = () => {
   return (
     <section className={styles.about}>
       <div className="container">
-        <div className={styles.header}>
-          <h1>About SecureEye CCTV</h1>
-          <p>Your safety is our priority. Since 2010, we have been providing top-notch security solutions.</p>
-        </div>
+        <motion.div 
+          className={styles.header}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h1>The story of The Pacific.</h1>
+          <p>Innovating security for a better world.</p>
+        </motion.div>
         
-        <div className={styles.grid}>
-          <div className={styles.content}>
-            <h2>Our Mission</h2>
+        <div className={styles.content}>
+          <motion.div 
+            className={styles.section}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <h2>Design and Purpose.</h2>
             <p>
-              At SecureEye, our mission is to provide peace of mind through advanced surveillance technology. 
-              We believe that everyone deserves to feel safe and secure in their homes and businesses.
+              We believe that security should be powerful yet invisible. 
+              The Pacific was founded with a single mission: to create a 
+              surveillance ecosystem that respects privacy as much as it 
+              protects your environment.
             </p>
-            <p>
-              We combine years of expertise with the latest innovations in CCTV and AI-powered monitoring 
-              to deliver security systems that are reliable, easy to use, and highly effective.
-            </p>
-            
-            <h2>Why We're Different</h2>
-            <ul>
-              <li><strong>Expert Team:</strong> Our technicians are fully certified and highly experienced.</li>
-              <li><strong>Quality Hardware:</strong> We only use industry-leading cameras and recording equipment.</li>
-              <li><strong>Local Support:</strong> We provide ongoing support and maintenance to our local community.</li>
-              <li><strong>Transparent Pricing:</strong> No hidden fees, just honest and competitive pricing.</li>
-            </ul>
-          </div>
+          </motion.div>
           
-          <div className={styles.stats}>
-            <div className={styles.statCard}>
-              <h3>15+</h3>
-              <p>Years Experience</p>
-            </div>
-            <div className={styles.statCard}>
-              <h3>5000+</h3>
-              <p>Happy Clients</p>
-            </div>
-            <div className={styles.statCard}>
-              <h3>12000+</h3>
-              <p>Cameras Installed</p>
-            </div>
-            <div className={styles.statCard}>
-              <h3>24/7</h3>
-              <p>Support Available</p>
-            </div>
-          </div>
+          <motion.div 
+            className={styles.section}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <h2>Sustainability.</h2>
+            <p>
+              Our hardware is designed to last. We use recycled materials 
+              and energy-efficient processing to ensure our footprint is 
+              as clean as our vision.
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>

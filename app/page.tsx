@@ -1,104 +1,81 @@
 'use client';
 
 import Hero from "@/components/Hero";
-import { Shield, Smartphone, Zap, Settings } from 'lucide-react';
 import { motion } from 'framer-motion';
 import styles from './page.module.css';
 
 export default function Home() {
-  const features = [
+  const sections = [
     {
-      icon: <Shield size={40} />,
-      title: "Secure Protection",
-      description: "Advanced encryption and physical security for your peace of mind."
+      id: 1,
+      title: "Privacy.",
+      subtitle: "That's The Pacific.",
+      description: "Encrypted end-to-end. Only you see what's happening.",
+      bgColor: "#f5f5f7",
+      textColor: "#1d1d1f",
+      btnText: "Learn about privacy",
+      image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80"
     },
     {
-      icon: <Smartphone size={40} />,
-      title: "Remote Access",
-      description: "View your cameras from anywhere in the world on your smartphone."
-    },
-    {
-      icon: <Zap size={40} />,
-      title: "Instant Alerts",
-      description: "Get real-time notifications on your device when motion is detected."
-    },
-    {
-      icon: <Settings size={40} />,
-      title: "Smart Analytics",
-      description: "AI-powered detection for people, vehicles, and pets."
+      id: 2,
+      title: "4K Clarity.",
+      subtitle: "See every detail.",
+      description: "Advanced optics and AI processing deliver stunning precision.",
+      bgColor: "#000",
+      textColor: "#fff",
+      btnText: "View the technology",
+      image: "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80"
     }
   ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
 
   return (
     <>
       <Hero />
       
-      <section className={styles.features}>
+      <div className={styles.gridContainer}>
+        {sections.map((section) => (
+          <section 
+            key={section.id} 
+            className={styles.gridSection} 
+            style={{ backgroundColor: section.bgColor, color: section.textColor }}
+          >
+            <div className="container">
+              <motion.div 
+                className={styles.gridContent}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <h2>{section.title}</h2>
+                <p className={styles.subtitle}>{section.subtitle}</p>
+                <p className={styles.description}>{section.description}</p>
+                <a href="/services" className="btn btn-outline" style={{ color: section.textColor === "#fff" ? "#0071e3" : "#0071e3" }}>
+                  {section.btnText}
+                </a>
+              </motion.div>
+            </div>
+          </section>
+        ))}
+      </div>
+
+      <section className={styles.finalCta}>
         <div className="container">
           <motion.div 
-            className={styles.sectionHeader}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2>Why Choose SecureEye?</h2>
-            <p>We provide the most advanced security solutions tailored to your needs.</p>
-          </motion.div>
-          
-          <motion.div 
-            className={styles.featureGrid}
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
+            className={styles.ctaContent}
+            initial={{ scale: 0.9, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
           >
-            {features.map((feature, index) => (
-              <motion.div key={index} className={styles.featureCard} variants={itemVariants}>
-                <div className={styles.icon}>{feature.icon}</div>
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
-              </motion.div>
-            ))}
+            <h2>Secure your future.</h2>
+            <p>Order The Pacific today and experience security like never before.</p>
+            <div className={styles.ctaActions}>
+              <a href="/book" className="btn btn-secondary">Buy</a>
+              <a href="/about" className="btn btn-outline">Learn more</a>
+            </div>
           </motion.div>
         </div>
       </section>
-
-      <motion.section 
-        className={styles.cta}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-      >
-        <div className="container">
-          <div className={styles.ctaContent}>
-            <h2>Ready to Secure Your Property?</h2>
-            <p>Join thousands of satisfied customers who trust SecureEye for their security needs.</p>
-            <motion.a 
-              href="/book" 
-              className="btn btn-secondary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Book Your Site Survey Today
-            </motion.a>
-          </div>
-        </div>
-      </motion.section>
     </>
   );
 }

@@ -11,32 +11,21 @@ const Hero = () => {
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className={styles.content}
         >
-          <motion.h1
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            Advanced Surveillance for Your Peace of Mind
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
-            Secure your home and business with state-of-the-art CCTV systems. 
-            Professional installation, 24/7 remote access, and crystal clear 4K imaging.
+          <motion.h1>The Pacific</motion.h1>
+          <motion.p className={styles.tagline}>
+            Vision. Reimagined.
+          </motion.p>
+          <motion.p className={styles.description}>
+            The most advanced security system ever. Pure, powerful, and private.
           </motion.p>
           <motion.div 
             className={styles.actions}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
           >
-            <Link href="/book" className="btn">Book Free Site Survey</Link>
-            <Link href="/services" className="btn btn-outline">Explore Our Systems</Link>
+            <Link href="/book" className="btn">Order Now</Link>
+            <Link href="/services" className="btn btn-outline">Learn more</Link>
           </motion.div>
         </motion.div>
       </div>

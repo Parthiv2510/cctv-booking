@@ -4,20 +4,20 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "SecureEye CCTV | Professional Security Camera Installation",
-  description: "Protect your home and business with SecureEye CCTV solutions. Professional installation, 24/7 monitoring, and high-quality cameras. Book a site survey today.",
-  keywords: "CCTV installation, security cameras, home security, business security, surveillance systems, book CCTV survey",
+  title: "The Pacific | Vision. Reimagined.",
+  description: "The most advanced security system ever. Pure, powerful, and private. Protect what matters with The Pacific.",
+  keywords: "The Pacific CCTV, security cameras, home security, business security, surveillance systems, buy CCTV",
   openGraph: {
-    title: "SecureEye CCTV | Professional Security Camera Installation",
-    description: "Expert CCTV installation and maintenance for residential and commercial properties.",
+    title: "The Pacific | Vision. Reimagined.",
+    description: "Expert CCTV installation and maintenance with a focus on privacy and clarity.",
     type: "website",
     locale: "en_US",
-    url: "https://secureeye-cctv.vercel.app",
-    siteName: "SecureEye CCTV",
+    url: "https://the-pacific-cctv.vercel.app",
+    siteName: "The Pacific",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SecureEye CCTV | Security Camera Experts",
+    title: "The Pacific | Security Reimagined",
     description: "Reliable surveillance solutions for your peace of mind.",
   },
 };
@@ -30,9 +30,9 @@ export default function RootLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    'name': 'SecureEye CCTV',
-    'image': 'https://secureeye-cctv.vercel.app/logo.png',
-    'description': 'Professional CCTV installation and monitoring services.',
+    'name': 'The Pacific',
+    'image': 'https://the-pacific-cctv.vercel.app/logo.png',
+    'description': 'Advanced security and surveillance systems.',
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': '123 Security St',
@@ -42,7 +42,7 @@ export default function RootLayout({
       'addressCountry': 'US'
     },
     'telephone': '+1234567890',
-    'url': 'https://secureeye-cctv.vercel.app',
+    'url': 'https://the-pacific-cctv.vercel.app',
     'openingHoursSpecification': [
       {
         '@type': 'OpeningHoursSpecification',
