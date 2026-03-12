@@ -38,7 +38,7 @@ const ScrollSection = ({ section }: { section: any }) => {
             <h2>{section.title}</h2>
             <p className={styles.subtitle}>{section.subtitle}</p>
             <p className={styles.description}>{section.description}</p>
-            <a href="/services" className="btn btn-outline" style={{ color: "#0071e3" }}>
+            <a href="/services" className="btn btn-outline">
               {section.btnText}
             </a>
           </motion.div>
@@ -109,7 +109,7 @@ export default function Home() {
     "https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1551709076-89f2499d383b?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1606206591513-085551c41667?q=80&w=800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?q=80&w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop"
   ];
 
