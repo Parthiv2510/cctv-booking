@@ -1,8 +1,9 @@
 'use client';
 
 import Hero from "@/components/Hero";
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import Loader from "@/components/Loader";
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { useRef, useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import styles from './page.module.css';
 
@@ -26,12 +27,12 @@ const ScrollSection = ({ section }: { section: any }) => {
         <div className={styles.gridWrapper}>
           <motion.div 
             className={styles.gridContent}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className={styles.sectionBadge} style={{ color: section.textColor === '#fff' ? '#0071e3' : '#000' }}>
+            <div className={styles.sectionBadge} style={{ color: "#0071e3" }}>
               {section.badge}
             </div>
             <h2>{section.title}</h2>
@@ -58,6 +59,15 @@ const ScrollSection = ({ section }: { section: any }) => {
 };
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, []);
+
   const sections = [
     {
       id: 1,
@@ -105,6 +115,10 @@ export default function Home() {
 
   return (
     <>
+      <AnimatePresence>
+        {loading && <Loader />}
+      </AnimatePresence>
+      
       <Hero />
       
       <div className={styles.gridContainer}>
