@@ -84,6 +84,18 @@ export default function Home() {
     }
   ];
 
+  const galleryImages = [
+    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80"
+  ];
+
+  const testimonials = [
+    { name: "John D.", text: "The clearest picture I've ever seen on a security camera. Exceptional.", role: "Business Owner" },
+    { name: "Sarah M.", text: "Installation was incredibly smooth. The Pacific team are true professionals.", role: "Homeowner" }
+  ];
+
   return (
     <>
       <Hero />
@@ -93,6 +105,56 @@ export default function Home() {
           <ScrollSection key={section.id} section={section} />
         ))}
       </div>
+
+      <section className={styles.gallery}>
+        <div className="container">
+          <motion.div 
+            className={styles.sectionHeader}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <h2>Design for any space.</h2>
+            <p>From modern homes to industrial complexes.</p>
+          </motion.div>
+          <div className={styles.galleryGrid}>
+            {galleryImages.map((src, idx) => (
+              <motion.div 
+                key={idx} 
+                className={styles.galleryItem}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+              >
+                <img src={src} alt="Pacific Installation" />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.testimonials}>
+        <div className="container">
+          <div className={styles.testimonialGrid}>
+            {testimonials.map((t, idx) => (
+              <motion.div 
+                key={idx} 
+                className={styles.testimonialCard}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <p>"{t.text}"</p>
+                <div className={styles.author}>
+                  <strong>{t.name}</strong>
+                  <span>{t.role}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className={styles.finalCta}>
         <div className="container">
