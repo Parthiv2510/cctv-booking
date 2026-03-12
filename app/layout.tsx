@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "The Pacific | Vision. Reimagined.",
   description: "The most advanced security system ever. Pure, powerful, and private. Protect what matters with The Pacific.",
   keywords: "The Pacific CCTV, security cameras, home security, business security, surveillance systems, buy CCTV",
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
     title: "The Pacific | Vision. Reimagined.",
     description: "Expert CCTV installation and maintenance with a focus on privacy and clarity.",
