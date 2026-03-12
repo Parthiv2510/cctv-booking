@@ -5,25 +5,32 @@ import { motion } from 'framer-motion';
 import styles from './WhatsAppButton.module.css';
 
 const WhatsAppButton = () => {
-  const phoneNumber = "919558830499"; // Updated to your number
-  const message = "Hi! I'm interested in a CCTV installation from The Pacific. Can I get a quote?";
+  const phoneNumber = "919558830499";
+  const message = "SECURE LINE: Requesting Pacific technical specs and installation quote.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
-    <motion.a
-      href={whatsappUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={styles.whatsapp}
-      initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-      transition={{ delay: 2 }}
-    >
-      <MessageCircle size={32} />
-      <span className={styles.tooltip}>Chat with us</span>
-    </motion.a>
+    <div className={styles.container}>
+      <motion.a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.whatsapp}
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <div className={styles.iconWrapper}>
+          <MessageCircle size={28} />
+          <span className={styles.onlineBadge}></span>
+        </div>
+        <div className={styles.textWrapper}>
+          <span className={styles.label}>SECURE LINE</span>
+          <span className={styles.sublabel}>Specialist Online</span>
+        </div>
+      </motion.a>
+    </div>
   );
 };
 
